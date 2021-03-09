@@ -1,0 +1,3 @@
+name: repo-www
+tlssecret: home-tls
+hostname: repo.crazyzone.be

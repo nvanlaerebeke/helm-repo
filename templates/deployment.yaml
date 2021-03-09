@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: repo-www
+  name: repo-www
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: repo-www
+  template:
+    metadata:
+      labels:
+        app: repo-www
+    spec:
+      volumes:
+        - name: repo-www-storage
+          nfs: 
+            server: nas.crazyzone.be 
+            path: /volume1/docker-storage/repo
+      containers:
+      - image: httpd:latest
+        name: repo-www
+        ports:
+        - containerPort: 80
+          name: repo-www
+        volumeMounts:
+        - name: repo-www-storage
+          mountPath: /usr/local/apache2/htdocs/
