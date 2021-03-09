@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-repo-www
+  name: ingress-repo
   annotations:
     kubernetes.io/tls-acme: 'true' 
     ingress.kubernetes.io/ssl-redirect: "true"
@@ -19,6 +19,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: repo-www
+                name: repo
                 port:
                   number: 80     
