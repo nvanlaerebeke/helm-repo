@@ -25,6 +25,13 @@ spec:
         ports:
         - containerPort: 80
           name: repo
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 80          
         volumeMounts:
         - name: repo-storage
           mountPath: /usr/local/apache2/htdocs/
