@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: repo-sync-ub20.04-mirror
 data:
-  appsettings.json: |
+  mirror.list: |
     ############# config ##################
     #
     set base_path    /mnt/apt-mirror

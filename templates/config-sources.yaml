@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: repo-sync-ub20.04-sources
 data:
-  appsettings.json: |
+  sources.list: |
     deb http://be.archive.ubuntu.com/ubuntu/ focal main restricted
     deb http://be.archive.ubuntu.com/ubuntu/ focal-updates main restricted
     deb http://be.archive.ubuntu.com/ubuntu/ focal universe
