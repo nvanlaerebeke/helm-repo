@@ -37,4 +37,5 @@ data:
     deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
 
     clean http://be.archive.ubuntu.com/ubuntu
+    clean http://security.ubuntu.com/ubuntu
     clean https://download.docker.com/linux/ubuntu
