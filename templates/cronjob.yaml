@@ -7,8 +7,8 @@ spec:
   jobTemplate:
     spec:
       template:
-        backoffLimit: 4
         spec:
+          restartPolicy: Never
           volumes:
           - name: repo-storage
             nfs: 
